@@ -248,7 +248,6 @@ class Test {
             throw err;
         }
     }    
-    
 }
 
 export default Test;

@@ -39,18 +39,25 @@ app.get('/test/ping', pingTest);
 
 // get all customers
 app.get('/bank/getCustomers', getCustomers);
+
 // create customer
 app.post('/bank/createCustomer', createCustomer)
+
 // create account
 app.post('/bank/createAccount', createAccount);
+
 // deposit money
 app.put('/bank/depositMoney', depositMoney);
+
 // withdraw money
 app.put('/bank/withdrawMoney', withdrawMoney);
+
 // transfer money
 app.post('/bank/transferMoney', transferMoney);
+
 // get transaction history
 app.get('/bank/transactionHistory', transactionHistory);
+
 
 //secured routes - auth using user JWT
 app.use('/api', handleOptionsReq, passport.authenticate('jwt', { session: false }));

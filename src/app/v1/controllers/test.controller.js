@@ -1,6 +1,5 @@
 import logger from "../../../../logger.js";
 import config from "../../../../config.js";
-import pkg from 'jsonwebtoken';
 import { StatusCodes } from 'http-status-codes';
 import Test from "../models/test.model.js";
 
@@ -177,8 +176,6 @@ export async function transactionHistory(req, res) {
             return res.status(404).json({ error: "No transactions found" });
         }
     } catch (err) {
-        console.error("An error occurred in transactionHistory function:", err);
-        res.status(StatusCodes.INTERNAL_SERVER_ERROR).send("An error occurred");
+        throw err;
     }
 }
-
