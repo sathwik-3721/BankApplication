@@ -183,8 +183,14 @@ export async function transactionHistory(req, res) {
 export async function deleteCustomer(req, res) {
     try {
         const { account_number } = req.body;
-        await Test.deleteCustomer(account_number);
-    } catch(err) {
-        throw err;
+        const deleteResult = await Test.deleteCustomer(account_number);
+        
+        if (deleteResult) {
+            return res.status(200).json({ message: 'Customer has been deleted' });
+        } else {
+            return res.status(404).json({ error: 'Account already deleted or does not exist' });
+        }
+    } catch (err) {
+       throw err;
     }
 }
