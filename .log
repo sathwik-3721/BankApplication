@@ -258,3 +258,14 @@
 {"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T15:27:51.113Z"}
 {"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T15:27:51.145Z"}
 {"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"DELETE","path":"/v1/bank/deleteCustomer/97099BWAAF","query":{},"responseTime":9,"status":"failed","timestamp":"2024-08-19T15:28:23.220Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T16:44:22.587Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T16:44:22.616Z"}
+{"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"DELETE","path":"/v1/bank/deleteCustomer/98765ABCDE","query":{},"responseTime":10,"status":"failed","timestamp":"2024-08-19T16:44:50.412Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T16:47:23.330Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T16:47:23.356Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T16:47:31.430Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T16:47:31.456Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T16:49:41.732Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T16:49:41.759Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T16:49:43.892Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T16:49:43.919Z"}

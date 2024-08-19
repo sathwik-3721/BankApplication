@@ -291,18 +291,30 @@ class Test {
     
     static async deleteCustomer(account_number) {
         try {
+            const pool = await poolPromise;
             const isValidAccountResult = await this.isValidAccount(account_number);
-            if (isValidAccountResult) {
-                const customer_id = await this.deleteFromAccounts(account_number);
-                await this.deleteFromCustomers(customer_id);
-                return true;
-            } else {
-                return false;
+            if (!isValidAccountResult) {
+                return { error: 'Account does not exist' };
             }
+            await this.deleteTransactionsByAccountNumber(account_number);
+            const customer_id = await this.deleteFromAccounts(account_number);
+            await this.deleteFromCustomers(customer_id);  
+            return { message: 'Customer and related transactions deleted successfully' };
+        } catch (err) {
+            throw err;
+        }
+    }
+
+    static async deleteTransactionsByAccountNumber(account_number) {
+        try {
+            const pool = await poolPromise;
+            const sql = 'DELETE FROM Transactions WHERE from_account_number = ? OR to_account_number = ?';
+            await pool.query(sql, [account_number, account_number]);
         } catch (err) {
             throw err;
         }
     }    
+        
 }
 
 export default Test;
