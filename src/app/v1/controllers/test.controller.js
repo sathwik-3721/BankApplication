@@ -183,9 +183,11 @@ export async function transactionHistory(req, res) {
 export async function deleteCustomer(req, res) {
     try {
         const { account_number } = req.body;
-        
+
         const deleteResult = await Test.deleteCustomer(account_number);
         
+        console.log("delete result", deleteResult);
+
         if (deleteResult.error) {
             return res.status(404).json({ error: deleteResult.error });
         }
@@ -195,5 +197,4 @@ export async function deleteCustomer(req, res) {
         console.error(err);
         return res.status(500).json({ error: 'Internal server error' });
     }
-
 }

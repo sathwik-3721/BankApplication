@@ -258,14 +258,14 @@ class Test {
         } catch (err) {
             throw err;
         }
-    }
+    }    
     
     static async deleteFromAccounts(account_number) {
         try {
             const pool = await poolPromise;
             const customer_id_sql = 'SELECT customer_id FROM Accounts WHERE account_number = ?';
             const [res] = await pool.query(customer_id_sql, [account_number]);
-    
+            
             if (res.length === 0) {
                 throw new Error('Account not found');
             }
@@ -277,7 +277,7 @@ class Test {
         } catch (err) {
             throw err;
         }
-    }
+    }    
     
     static async deleteFromCustomers(customer_id) {
         try {
@@ -287,33 +287,42 @@ class Test {
         } catch (err) {
             throw err;
         }
-    }
+    }    
     
     static async deleteCustomer(account_number) {
         try {
             const pool = await poolPromise;
+    
             const isValidAccountResult = await this.isValidAccount(account_number);
             if (!isValidAccountResult) {
                 return { error: 'Account does not exist' };
             }
-            await this.deleteTransactionsByAccountNumber(account_number);
+    
             const customer_id = await this.deleteFromAccounts(account_number);
-            await this.deleteFromCustomers(customer_id);  
-            return { message: 'Customer and related transactions deleted successfully' };
+    
+            const sqlCheckAccounts = 'SELECT COUNT(*) as count FROM Accounts WHERE customer_id = ?';
+            const [checkRes] = await pool.query(sqlCheckAccounts, [customer_id]);
+    
+            if (checkRes[0].count === 0) {
+                await this.deleteFromCustomers(customer_id);
+            }
+    
+            return { message: 'Customer and related account deleted successfully' };
         } catch (err) {
             throw err;
         }
     }
-
-    static async deleteTransactionsByAccountNumber(account_number) {
-        try {
-            const pool = await poolPromise;
-            const sql = 'DELETE FROM Transactions WHERE from_account_number = ? OR to_account_number = ?';
-            await pool.query(sql, [account_number, account_number]);
-        } catch (err) {
-            throw err;
-        }
-    }    
+    
+    
+    // static async deleteTransactionsByAccountNumber(account_number) {
+    //     try {
+    //         const pool = await poolPromise;
+    //         const sql = 'DELETE FROM Transactions WHERE from_account_number = ? OR to_account_number = ?';
+    //         await pool.query(sql, [account_number, account_number]);
+    //     } catch (err) {
+    //         throw err;
+    //     }
+    // }    
         
 }
 

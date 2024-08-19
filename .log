@@ -269,3 +269,38 @@
 {"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T16:49:41.759Z"}
 {"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T16:49:43.892Z"}
 {"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T16:49:43.919Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T16:50:53.102Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T16:50:53.128Z"}
+{"body":{"account_number":"98765ABCDE"},"ip":"::1","level":"info","message":"HTTP Request","method":"DELETE","path":"/bank/deleteCustomer","query":{},"responseTime":81,"status":"failed","timestamp":"2024-08-19T16:50:58.219Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T16:51:27.651Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T16:51:27.679Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T16:52:36.298Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T16:52:36.325Z"}
+{"body":{"account_number":"98765ABCDE"},"ip":"::1","level":"info","message":"HTTP Request","method":"DELETE","path":"/bank/deleteCustomer","query":{},"responseTime":23,"status":"failed","timestamp":"2024-08-19T16:52:41.615Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"account_number":"97099BWAAF"},"ip":"::1","level":"info","message":"HTTP Request","method":"DELETE","path":"/bank/deleteCustomer","query":{},"responseTime":260,"status":"failed","timestamp":"2024-08-19T16:54:35.536Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T16:58:57.987Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T16:58:58.025Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T16:58:59.707Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T16:58:59.734Z"}
+{"body":{"account_number":"97899AWAAF"},"ip":"::1","level":"info","message":"HTTP Request","method":"DELETE","path":"/bank/deleteCustomer","query":{},"responseTime":61,"status":"failed","timestamp":"2024-08-19T16:59:29.907Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T17:00:09.277Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T17:00:09.305Z"}
+{"body":{"account_number":"90090BCAAF"},"ip":"::1","level":"info","message":"HTTP Request","method":"DELETE","path":"/bank/deleteCustomer","query":{},"responseTime":57,"status":"failed","timestamp":"2024-08-19T17:00:20.709Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T17:03:11.435Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T17:03:11.464Z"}
+{"body":{"account_type":"Savings","balance":19000,"customer_id":1},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/bank/createAccount","query":{},"responseTime":62,"status":"success","timestamp":"2024-08-19T17:03:21.176Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"account_type":"Savings","balance":19000,"customer_id":13},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/bank/createAccount","query":{},"responseTime":21,"status":"success","timestamp":"2024-08-19T17:03:28.883Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"account_type":"Savings","balance":19000,"customer_id":7},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/bank/createAccount","query":{},"responseTime":24,"status":"success","timestamp":"2024-08-19T17:03:36.419Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"account_type":"Savings","balance":19000,"customer_id":8},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/bank/createAccount","query":{},"responseTime":36,"status":"success","timestamp":"2024-08-19T17:03:41.197Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"account_type":"Savings","balance":19000,"customer_id":9},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/bank/createAccount","query":{},"responseTime":29,"status":"success","timestamp":"2024-08-19T17:03:45.640Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"account_number":"90090BCAAF"},"ip":"::1","level":"info","message":"HTTP Request","method":"DELETE","path":"/bank/deleteCustomer","query":{},"responseTime":69,"status":"failed","timestamp":"2024-08-19T17:04:20.070Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T17:05:51.644Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T17:05:51.672Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T17:06:03.234Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T17:06:03.261Z"}
+{"body":{"account_number":"98765ABCDE"},"ip":"::1","level":"info","message":"HTTP Request","method":"DELETE","path":"/bank/deleteCustomer","query":{},"responseTime":93,"status":"failed","timestamp":"2024-08-19T17:06:17.681Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T17:11:50.392Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T17:11:50.421Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T17:12:01.135Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T17:12:01.162Z"}
+{"body":{"account_number":"97895AWSDF"},"ip":"::1","level":"info","message":"HTTP Request","method":"DELETE","path":"/bank/deleteCustomer","query":{},"responseTime":73,"status":"success","timestamp":"2024-08-19T17:12:18.047Z","userAgent":"PostmanRuntime/7.41.1"}
