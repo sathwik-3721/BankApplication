@@ -248,6 +248,60 @@ class Test {
             throw err;
         }
     }    
+
+    static async isValidAccount(account_number) {
+        try {
+            const pool = await poolPromise;
+            const sql = 'SELECT * FROM Accounts WHERE account_number = ?';
+            const [res] = await pool.query(sql, [account_number]);
+            if (res.length != 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch(err) {
+            throw err;
+        }
+    }
+
+    static async deleteFromAccounts(account_number) {
+        try {
+            const pool = await poolPromise;
+            const customer_id_sql = 'SELECT * FROM Accounts WHERE account_number = ?';
+            const [res] = await pool.query(customer_id_sql, [account_number]);
+            const sql = 'DELETE FROM Accounts WHERE account_number = ?';
+            await pool.query(sql, [account_number]);
+            return res[0].customer_id;
+        } catch(err) {
+            throw err;
+        }
+    }
+
+    static async deleteFromCustomers(account_number) {
+        try {
+            const pool = await poolPromise;
+            const customer_id = await this.deleteFromAccounts;
+            const sql = 'DELETE FROM Customers WHERE customer_id = ?';
+            await pool.query(sql, [customer_id]);
+        } catch(err) {
+            throw err;
+        }
+    }
+
+    static async deleteCustomer(account_number) {
+        try {
+            const pool = poolPromise;
+            const isValidAccountResult = this.isValidAccount(account_number);
+            if (isValidAccountResult) {
+                await this.deleteFromAccounts(account_number);
+                await this.deleteFromCustomers(account_number);
+            } else {
+                res.status(404).json({error: 'Account already deleted or does not exists'});
+            }
+        } catch(err) {
+            throw err;
+        }
+    }
 }
 
 export default Test;

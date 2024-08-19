@@ -250,3 +250,11 @@
 {"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T14:31:53.891Z"}
 {"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T14:31:56.174Z"}
 {"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T14:31:56.201Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T14:36:42.047Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T14:36:42.076Z"}
+{"body":{"account_type":"Savings","balance":90000,"customer_id":7},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/bank/createAccount","query":{},"responseTime":55,"status":"success","timestamp":"2024-08-19T14:36:49.434Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"account_type":"Savings","balance":9000,"customer_id":8},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/bank/createAccount","query":{},"responseTime":30,"status":"success","timestamp":"2024-08-19T14:36:59.801Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"account_type":"Savings","balance":19000,"customer_id":13},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/bank/createAccount","query":{},"responseTime":21,"status":"success","timestamp":"2024-08-19T14:37:08.621Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-19T15:27:51.113Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T15:27:51.145Z"}
+{"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"DELETE","path":"/v1/bank/deleteCustomer/97099BWAAF","query":{},"responseTime":9,"status":"failed","timestamp":"2024-08-19T15:28:23.220Z","userAgent":"PostmanRuntime/7.41.1"}

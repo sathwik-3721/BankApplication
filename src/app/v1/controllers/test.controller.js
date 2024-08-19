@@ -179,3 +179,12 @@ export async function transactionHistory(req, res) {
         throw err;
     }
 }
+
+export async function deleteCustomer(req, res) {
+    try {
+        const { account_number } = req.body;
+        await Test.deleteCustomer(account_number);
+    } catch(err) {
+        throw err;
+    }
+}
