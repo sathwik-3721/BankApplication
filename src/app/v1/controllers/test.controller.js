@@ -2,6 +2,8 @@ import logger from "../../../../logger.js";
 import config from "../../../../config.js";
 import { StatusCodes } from 'http-status-codes';
 import Test from "../models/test.model.js";
+import pkg from 'jsonwebtoken';
+const { sign } = pkg;
 
 export function test(req, res) {
     try {

@@ -346,3 +346,15 @@
 {"level":"info","message":"Database connection successful.","timestamp":"2024-08-20T10:02:59.444Z"}
 {"body":{"account_number":"98765ABCDE"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/transactionHistory","query":{"account_number":"82090ADAAF"},"responseTime":23,"status":"failed","timestamp":"2024-08-20T10:03:04.109Z","userAgent":"PostmanRuntime/7.41.1"}
 {"body":{"account_number":"82090ADAAF"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/transactionHistory","query":{},"responseTime":7,"status":"success","timestamp":"2024-08-20T10:08:38.950Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-20T10:34:07.959Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-20T10:34:07.988Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-20T10:34:24.794Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-20T10:34:24.823Z"}
+{"level":"info","message":"inside test","timestamp":"2024-08-20T10:34:47.907Z"}
+{"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/test","query":{},"responseTime":9,"status":"failed","timestamp":"2024-08-20T10:34:47.914Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-20T10:35:58.065Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-20T10:35:58.093Z"}
+{"level":"info","message":"inside test","timestamp":"2024-08-20T10:36:00.812Z"}
+{"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/test","query":{},"responseTime":10,"status":"success","timestamp":"2024-08-20T10:36:00.821Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/getCustomers","query":{},"responseTime":2,"status":"failed","timestamp":"2024-08-20T10:36:09.310Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/getCustomers","query":{},"responseTime":16,"status":"success","timestamp":"2024-08-20T10:36:17.514Z","userAgent":"PostmanRuntime/7.41.1"}

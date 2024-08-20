@@ -15,7 +15,7 @@ import testRouter from '../v1/routes/test.routes.js';
 //defining the JWT strategy
 const passportStrategy = new JwtStrategy({
     jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-    secretOrKey: 'superSecret'  // secret key 
+    secretOrKey: "superSecret"  // secret key 
 }, (jwt_payload, next) => {
     console.log(jwt_payload)
     next(null, jwt_payload)
@@ -38,7 +38,7 @@ app.get('/test', test);
 app.get('/test/ping', pingTest);
 
 // get all customers
-app.get('/bank/getCustomers', getCustomers);
+app.get('/bank/getCustomers', passport.authenticate('jwt', { session: false }), getCustomers);
 
 // create customer
 app.post('/bank/createCustomer', createCustomer)
