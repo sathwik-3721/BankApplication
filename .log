@@ -333,3 +333,16 @@
 {"level":"info","message":"Database connection successful.","timestamp":"2024-08-19T18:00:29.285Z"}
 {"body":{"account_number":"98765ABCDE"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/transactionHistory","query":{"account_number":"80090ACAAF"},"responseTime":21,"status":"failed","timestamp":"2024-08-19T18:00:57.374Z","userAgent":"PostmanRuntime/7.41.1"}
 {"body":{"account_number":"98765ABCDE"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/transactionHistory","query":{"account_number":"82090ADAAF"},"responseTime":20,"status":"failed","timestamp":"2024-08-19T18:01:12.743Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-20T09:46:11.470Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-20T09:46:11.503Z"}
+{"body":{"account_number":"98765ABCDE"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/transactionHistory","query":{"account_number":"82090ADAAF"},"responseTime":28,"status":"failed","timestamp":"2024-08-20T09:46:31.537Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-20T09:47:55.679Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-20T09:47:55.706Z"}
+{"body":{"account_number":"98765ABCDE"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/transactionHistory","query":{"account_number":"82090ADAAF"},"responseTime":23,"status":"failed","timestamp":"2024-08-20T09:47:57.833Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-20T09:48:46.135Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-20T09:48:46.162Z"}
+{"body":{"account_number":"98765ABCDE"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/transactionHistory","query":{"account_number":"82090ADAAF"},"responseTime":22,"status":"failed","timestamp":"2024-08-20T09:48:47.462Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-20T10:02:59.417Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-20T10:02:59.444Z"}
+{"body":{"account_number":"98765ABCDE"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/transactionHistory","query":{"account_number":"82090ADAAF"},"responseTime":23,"status":"failed","timestamp":"2024-08-20T10:03:04.109Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"account_number":"82090ADAAF"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/transactionHistory","query":{},"responseTime":7,"status":"success","timestamp":"2024-08-20T10:08:38.950Z","userAgent":"PostmanRuntime/7.41.1"}

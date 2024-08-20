@@ -241,8 +241,10 @@ class Test {
     static async getTransactionHistory(account_number) {
         try {
             const pool = await poolPromise;
+            console.log('Accno', account_number);
             const sql = 'SELECT * FROM Transactions WHERE from_account_number = ? OR to_account_number = ?';
             const [res] = await pool.query(sql, [account_number, account_number]);
+            console.log("res", res);
             return res;
         } catch (err) {
             throw err;

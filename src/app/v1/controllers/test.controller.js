@@ -169,6 +169,7 @@ export async function transactionHistory(req, res) {
     try {
         const { account_number } = req.body;
         const transactions = await Test.getTransactionHistory(account_number);
+        console.log("transactions", transactions);
 
         if (transactions.length > 0) {
             return res.status(200).json(transactions);
