@@ -383,6 +383,31 @@ class Test {
             throw err;
         }
     }
+
+    static async isValidPIN(pin) {
+        try {
+            let PIN = pin;
+            let revPin = PIN.split('').reverse().join(''); 
+            if (PIN === revPin) {
+                return false;
+            } else {
+                return true;
+            }
+        } catch(err) {
+            throw err;
+        }
+    }
+
+    static async generatePIN(card_number, pin) {
+        try {
+            const pool = await poolPromise;
+            const sql = 'UPDATE Cards SET pin = ? WHERE card_number = ?';
+            const [res] = await pool.query(sql, [pin, card_number]);
+            return res;
+        } catch(err) {
+            throw err;
+        }
+    }
         
 }
 

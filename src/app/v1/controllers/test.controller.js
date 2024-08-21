@@ -260,3 +260,25 @@ export async function getCardDetails(req, res) {
         throw err;
     }
 }
+
+export async function generatePIN(req, res) {
+    try {
+        const { card_number, pin, account_number } = req.body;
+        console.log(req.body);
+        const isValidCardResult = await Test.isValidCard(account_number);
+        const isValidAccountResult = await Test.isValidAccount(account_number);
+        const isValidPINResult = await Test.isValidPIN(pin);
+        if (!isValidCardResult && isValidAccountResult && isValidPINResult) {
+            const pinResult = await Test.generatePIN(card_number, pin);
+            if (pinResult.affectedRows > 0) {
+                return res.status(200).json({message: 'Pin generated sucessfully'});
+            } else {
+                return res.status(404).json({error: 'Card number not exists'});
+            }
+        } else {
+            return res.status(400).json({error: 'Check the Card number or PIN or Account number'});
+        }
+    } catch(err) {
+        throw err;
+    }
+}

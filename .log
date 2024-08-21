@@ -412,3 +412,21 @@
 {"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:45:56.751Z"}
 {"body":{"card_number":"0292204546101072"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/getCardDetails","query":{},"responseTime":38,"status":"success","timestamp":"2024-08-21T09:45:58.275Z","userAgent":"PostmanRuntime/7.41.1"}
 {"body":{"card_number":"1"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/getCardDetails","query":{},"responseTime":7,"status":"failed","timestamp":"2024-08-21T09:46:08.612Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T13:43:48.505Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T13:43:48.538Z"}
+{"body":{"account_number":"97099BWAAF","card_type":"debit"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/bank/applyForCard","query":{},"responseTime":189,"status":"success","timestamp":"2024-08-21T13:44:01.741Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T14:01:46.791Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T14:01:46.817Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T14:07:16.990Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T14:07:17.016Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T14:07:56.541Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T14:07:56.570Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T14:14:02.097Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T14:14:02.126Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T14:14:21.390Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T14:14:21.434Z"}
+{"body":{"account_number":"97099BWAAF","card_number":"1791038880970605","pin":"2003"},"ip":"::1","level":"info","message":"HTTP Request","method":"PUT","path":"/bank/generatePIN","query":{},"responseTime":119,"status":"success","timestamp":"2024-08-21T14:15:53.641Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"account_number":"97099BWAAF","card_number":"1791038880970605","pin":"2003"},"ip":"::1","level":"info","message":"HTTP Request","method":"PUT","path":"/bank/generatePIN","query":{},"responseTime":19,"status":"success","timestamp":"2024-08-21T14:16:01.439Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"account_number":"97099BWAAF","card_number":"1791038880970605","pin":"4002"},"ip":"::1","level":"info","message":"HTTP Request","method":"PUT","path":"/bank/generatePIN","query":{},"responseTime":32,"status":"success","timestamp":"2024-08-21T14:16:23.373Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"account_number":"97099BWAAF","card_number":"1791038880970605","pin":"4004"},"ip":"::1","level":"info","message":"HTTP Request","method":"PUT","path":"/bank/generatePIN","query":{},"responseTime":5,"status":"failed","timestamp":"2024-08-21T14:16:31.385Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"account_number":"97099BWAAF","card_number":"1781038880970605","pin":"4004"},"ip":"::1","level":"info","message":"HTTP Request","method":"PUT","path":"/bank/generatePIN","query":{},"responseTime":2,"status":"failed","timestamp":"2024-08-21T14:16:37.010Z","userAgent":"PostmanRuntime/7.41.1"}
