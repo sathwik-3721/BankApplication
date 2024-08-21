@@ -456,3 +456,6 @@
 {"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T15:14:21.166Z"}
 {"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T15:14:21.192Z"}
 {"body":{"card_number":"3984315473999092","pin":"2000"},"ip":"::1","level":"info","message":"HTTP Request","method":"PUT","path":"/bank/updatePIN","query":{},"responseTime":30,"status":"failed","timestamp":"2024-08-21T15:14:24.199Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T16:43:20.742Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T16:43:20.769Z"}
+{"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/getCustomers","query":{},"responseTime":26,"status":"success","timestamp":"2024-08-21T16:43:23.825Z","userAgent":"PostmanRuntime/7.41.1"}

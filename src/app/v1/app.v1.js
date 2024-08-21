@@ -38,7 +38,7 @@ app.get('/test', test);
 app.get('/test/ping', pingTest);
 
 // get all customers
-app.get('/bank/getCustomers', passport.authenticate('jwt', { session: false }), getCustomers);
+app.get('/bank/getCustomers', getCustomers);
 
 // create customer
 app.post('/bank/createCustomer', createCustomer)
