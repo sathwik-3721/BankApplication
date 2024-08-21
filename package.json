@@ -8,7 +8,8 @@
     "install-all": "npm i && cd client && npm i --f",
     "start:dev": "concurrently -p [{name}-{time}] -c cyan,green -n server,client \"nodemon development\" \"cd client && npm run dev\"",
     "start:stage": "concurrently \"npm start staging\" \"cd client && npm run dev\"",
-    "start:prod": "concurrently \"npm start production\" \"cd client && npm run dev\""
+    "start:prod": "concurrently \"npm start production\" \"cd client && npm run dev\"",
+    "build": "cd client && npm run build"
   },
   "type": "module",
   "dependencies": {
