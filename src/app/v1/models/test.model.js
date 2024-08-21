@@ -373,12 +373,21 @@ class Test {
         }
     }
 
-    static async getCardDetails(card_number) {
+    static async getCardDetails(account_number) {
         try {
             const pool = await poolPromise;
-            const sql = 'SELECT * FROM Cards WHERE card_number = ?';
-            const [res] = await pool.query(sql, [card_number]);
+            const sql = 'SELECT * FROM Cards WHERE account_number = ?';
+            const [res] = await pool.query(sql, [account_number]);
             return res;
+        } catch(err) {
+            throw err;
+        }
+    }
+
+    static async generatePINNumber() {
+        try {
+            const pinNumber = Math.floor(1000 + Math.random() * 9000);
+            return pinNumber.toString();
         } catch(err) {
             throw err;
         }
@@ -404,6 +413,33 @@ class Test {
             const sql = 'UPDATE Cards SET pin = ? WHERE card_number = ?';
             const [res] = await pool.query(sql, [pin, card_number]);
             return res;
+        } catch(err) {
+            throw err;
+        }
+    }
+
+    static async validatePIN(card_number, pin) {
+        try{
+            const pool = await poolPromise;
+            const isValidPINResult = await this.isValidPIN(pin);
+            const sql = 'SELECT pin FROM Cards WHERE card_number = ?';
+            const [res] = await pool.query(sql, [card_number]);
+            const existingPIN = res[0].pin;
+            if (pin === existingPIN) {
+                return false;
+            } else {
+                if (isValidPINResult) {
+                    const updatePinSql = 'UPDATE Cards SET pin = ? WHERE card_number = ?';
+                    const [updateRes] = await pool.query(updatePinSql, [pin, card_number]);
+                    if (updateRes.affectedRows > 0) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
+            }
         } catch(err) {
             throw err;
         }

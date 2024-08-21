@@ -7,7 +7,7 @@ const { Strategy: JwtStrategy, ExtractJwt } = passportJWT;
 const app = express();
 
 //controllers
-import { applyForCard, createAccount, createCustomer, deleteCustomer, depositMoney, generatePIN, getBalance, getCardDetails, getCustomers, pingTest, test, transactionHistory, transferMoney, withdrawMoney } from '../v1/controllers/test.controller.js';
+import { applyForCard, createAccount, createCustomer, deleteCustomer, depositMoney, generatePIN, getBalance, getCardDetails, getCustomers, pingTest, test, transactionHistory, transferMoney, updatePIN, withdrawMoney } from '../v1/controllers/test.controller.js';
 
 //routers
 import testRouter from '../v1/routes/test.routes.js';
@@ -72,6 +72,9 @@ app.get('/bank/getCardDetails', getCardDetails);
 
 // generate PIN for card
 app.put('/bank/generatePIN', generatePIN);
+
+// update PIN number --> user gives custom PIN number
+app.put('/bank/updatePIN', updatePIN);
 
 
 //secured routes - auth using user JWT

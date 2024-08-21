@@ -247,14 +247,14 @@ export async function applyForCard(req, res) {
 
 export async function getCardDetails(req, res) {
     try {
-        const { card_number } = req.body;
+        const { account_number } = req.body;
         console.log(req.body);
-        const getCardDetailsResult = await Test.getCardDetails(card_number);
+        const getCardDetailsResult = await Test.getCardDetails(account_number);
         if (getCardDetailsResult.length > 0) {
             return res.status(200).json(getCardDetailsResult);
         } else {
             console.log(getCardDetailsResult);
-            return res.status(404).json({error: 'Card number not exists'});
+            return res.status(404).json({error: 'Account number not exists'});
         }
     } catch(err) {
         throw err;
@@ -263,8 +263,10 @@ export async function getCardDetails(req, res) {
 
 export async function generatePIN(req, res) {
     try {
-        const { card_number, pin, account_number } = req.body;
+        const { card_number, account_number } = req.body;
         console.log(req.body);
+        const pin = await Test.generatePINNumber();
+        console.log("pin", pin);
         const isValidCardResult = await Test.isValidCard(account_number);
         const isValidAccountResult = await Test.isValidAccount(account_number);
         const isValidPINResult = await Test.isValidPIN(pin);
@@ -276,9 +278,24 @@ export async function generatePIN(req, res) {
                 return res.status(404).json({error: 'Card number not exists'});
             }
         } else {
-            return res.status(400).json({error: 'Check the Card number or PIN or Account number'});
+            return res.status(500).json({error: 'Internal server error, please try again'});
         }
     } catch(err) {
         throw err;
+    }
+}
+
+export async function updatePIN(req, res) {
+    try {
+        const { card_number, pin } = req.body;
+        console.log(req.body);
+        const validatePinResult = await Test.validatePIN(card_number, pin);
+        if (validatePinResult) {
+            return res.status(200).json({message: 'PIN updated sucessfully'});
+        } else {
+            return res.status(409).json({error: 'Check pin number or account number'});
+        }
+    } catch(err) {
+
     }
 }
