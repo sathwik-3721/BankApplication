@@ -7,7 +7,7 @@ const { Strategy: JwtStrategy, ExtractJwt } = passportJWT;
 const app = express();
 
 //controllers
-import { createAccount, createCustomer, deleteCustomer, depositMoney, getCustomers, pingTest, test, transactionHistory, transferMoney, withdrawMoney } from '../v1/controllers/test.controller.js';
+import { applyForCard, createAccount, createCustomer, deleteCustomer, depositMoney, getBalance, getCardDetails, getCustomers, pingTest, test, transactionHistory, transferMoney, withdrawMoney } from '../v1/controllers/test.controller.js';
 
 //routers
 import testRouter from '../v1/routes/test.routes.js';
@@ -60,6 +60,16 @@ app.get('/bank/transactionHistory', transactionHistory);
 
 // delete customer
 app.delete('/bank/deleteCustomer', deleteCustomer);
+
+// get check balance of account
+app.get('/bank/getBalance', getBalance);
+
+// apply for a card
+app.post('/bank/applyForCard', applyForCard);
+
+// get card details
+app.get('/bank/getCardDetails', getCardDetails);
+
 
 //secured routes - auth using user JWT
 app.use('/api', handleOptionsReq, passport.authenticate('jwt', { session: false }));

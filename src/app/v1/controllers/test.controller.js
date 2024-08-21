@@ -202,3 +202,61 @@ export async function deleteCustomer(req, res) {
     }
 }
 
+export async function getBalance(req, res) {
+    try {
+        const { account_number } = req.body;
+        const accountResult = await Test.isValidAccount(account_number);
+        console.log("is exist", accountResult);
+        if (accountResult) {
+            const balanceResult = await Test.getBalance(account_number);
+            res.status(200).json(balanceResult);
+        } else {
+            res.status(404).json({error: "Account not exists"});
+        }
+    } catch(err) {
+        throw err;
+    }
+}
+
+export async function applyForCard(req, res) {
+    try {
+        const { account_number, card_type } = req.body;
+        console.log(req.body);
+        const new_card_type = card_type.toLowerCase();
+        const isValidAccount = await Test.isValidAccount(account_number);
+        if (!isValidAccount) {
+            return res.status(404).json({error: 'Account not exists'});
+        }
+
+        if (new_card_type !== "credit" && new_card_type !== "debit") {
+            return res.status(400).json({error: 'Invalid card type'});
+        }
+
+        const applyForCardReslut = await Test.applyForCard(account_number, card_type);
+        console.log("applyforcardres", applyForCardReslut); 
+        if (applyForCardReslut !== null) {
+            return res.status(201).json({message: 'Card has been sucessfully generated'});
+        } else {
+            return res.status(409).json({error: 'Card number already exist for the given account number'});
+        }
+
+    } catch(err) {
+        throw err;
+    }
+}
+
+export async function getCardDetails(req, res) {
+    try {
+        const { card_number } = req.body;
+        console.log(req.body);
+        const getCardDetailsResult = await Test.getCardDetails(card_number);
+        if (getCardDetailsResult.length > 0) {
+            return res.status(200).json(getCardDetailsResult);
+        } else {
+            console.log(getCardDetailsResult);
+            return res.status(404).json({error: 'Card number not exists'});
+        }
+    } catch(err) {
+        throw err;
+    }
+}

@@ -358,3 +358,57 @@
 {"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/test","query":{},"responseTime":10,"status":"success","timestamp":"2024-08-20T10:36:00.821Z","userAgent":"PostmanRuntime/7.41.1"}
 {"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/getCustomers","query":{},"responseTime":2,"status":"failed","timestamp":"2024-08-20T10:36:09.310Z","userAgent":"PostmanRuntime/7.41.1"}
 {"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/getCustomers","query":{},"responseTime":16,"status":"success","timestamp":"2024-08-20T10:36:17.514Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-20T13:24:48.779Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-20T13:24:48.810Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-20T13:25:39.921Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-20T13:25:39.947Z"}
+{"body":{"account_number":"97099BWAAF"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/getBalance","query":{},"responseTime":27,"status":"success","timestamp":"2024-08-20T13:25:41.456Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"account_number":"97099BAAAF"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/getBalance","query":{},"responseTime":14,"status":"failed","timestamp":"2024-08-20T13:26:01.928Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:17:55.697Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:17:55.761Z"}
+{"body":{"account_number":"97099BWAAF","card_type":"debit"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/bank/applyForCard","query":{},"responseTime":31,"status":"failed","timestamp":"2024-08-21T09:19:06.869Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:19:43.839Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:19:43.866Z"}
+{"body":{"account_number":"97099BWAAF","card_type":"debit"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/bank/applyForCard","query":{},"responseTime":22,"status":"failed","timestamp":"2024-08-21T09:19:46.806Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:20:53.514Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:20:53.558Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:21:46.713Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:21:46.740Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:22:13.394Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:22:13.422Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:22:49.056Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:22:49.084Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:23:05.255Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:23:05.279Z"}
+{"body":{"account_number":"97099BWAAF","card_type":"debit"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/bank/applyForCard","query":{},"responseTime":114,"status":"success","timestamp":"2024-08-21T09:23:09.172Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:23:31.480Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:23:31.507Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:30:01.223Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:30:01.249Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:30:50.684Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:30:50.712Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:31:04.196Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:31:04.240Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:32:01.059Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:32:01.085Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:32:21.225Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:32:21.253Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:33:10.401Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:33:10.427Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:33:34.064Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:33:34.092Z"}
+{"body":{"account_number":"97099BWAAF","card_type":"debit"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/bank/applyForCard","query":{},"responseTime":28,"status":"failed","timestamp":"2024-08-21T09:33:36.341Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:35:32.750Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:35:32.777Z"}
+{"body":{"account_number":"97099BWAAF","card_type":"debit"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/bank/applyForCard","query":{},"responseTime":28,"status":"failed","timestamp":"2024-08-21T09:35:36.564Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:43:51.952Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:43:51.980Z"}
+{"body":{"card_number":"hibiujvo"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/v1//bankgetCardDetails","query":{},"responseTime":15,"status":"failed","timestamp":"2024-08-21T09:44:14.432Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:44:42.356Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:44:42.385Z"}
+{"body":{"card_number":"hibiujvo"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/v1//bankgetCardDetails","query":{},"responseTime":14,"status":"failed","timestamp":"2024-08-21T09:44:44.372Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"card_number":"0292204546101072"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/v1//bankgetCardDetails","query":{},"responseTime":3,"status":"failed","timestamp":"2024-08-21T09:45:16.845Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-21T09:45:56.711Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-21T09:45:56.751Z"}
+{"body":{"card_number":"0292204546101072"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/getCardDetails","query":{},"responseTime":38,"status":"success","timestamp":"2024-08-21T09:45:58.275Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"card_number":"1"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/bank/getCardDetails","query":{},"responseTime":7,"status":"failed","timestamp":"2024-08-21T09:46:08.612Z","userAgent":"PostmanRuntime/7.41.1"}

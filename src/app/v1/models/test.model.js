@@ -314,17 +314,75 @@ class Test {
             throw err;
         }
     }
-    
-    
-    // static async deleteTransactionsByAccountNumber(account_number) {
-    //     try {
-    //         const pool = await poolPromise;
-    //         const sql = 'DELETE FROM Transactions WHERE from_account_number = ? OR to_account_number = ?';
-    //         await pool.query(sql, [account_number, account_number]);
-    //     } catch (err) {
-    //         throw err;
-    //     }
-    // }    
+        
+    static async getBalance(account_number) {
+        try {
+            const pool = await poolPromise;
+            const sql = 'SELECT balance FROM Accounts WHERE account_number = ?';
+            const [res] = await pool.query(sql, [account_number]);
+            return res;
+        } catch(err) {
+            throw err;
+        }
+    }
+
+    static async generateCardNumber() {
+        try {
+            const length = 16;
+            let card_number = '';
+            for (let i = 0; i < length; i++) {
+                card_number += Math.floor(Math.random() * 10).toString();
+            }
+            return card_number;
+        } catch(err) {
+            throw err;
+        }
+    }
+
+    static async isValidCard(account_number) {
+        try {
+            const pool = await poolPromise;
+            const sql = 'SELECT * FROM Cards WHERE account_number = ?';
+            const [res] = await pool.query(sql, [account_number]);
+            if (res.length === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch(err) {
+            throw err;
+        }
+    }
+
+    static async applyForCard(account_number, card_type) {
+        try {
+            const pool = await poolPromise;
+            const card_number = await this.generateCardNumber();
+            console.log("cardn", card_number)
+            const isValidCardResult = await this.isValidCard(account_number);
+            console.log("isvalidacc", isValidCardResult);
+            if (isValidCardResult) {
+                const sql = 'INSERT INTO Cards (account_number, card_number, card_type) VALUES (?, ?, ?)';
+                const [res] = await pool.query(sql, [account_number, card_number, card_type]);
+                return res;
+            } else {
+                return null;
+            }
+        } catch(err) {
+            throw err;
+        }
+    }
+
+    static async getCardDetails(card_number) {
+        try {
+            const pool = await poolPromise;
+            const sql = 'SELECT * FROM Cards WHERE card_number = ?';
+            const [res] = await pool.query(sql, [card_number]);
+            return res;
+        } catch(err) {
+            throw err;
+        }
+    }
         
 }
 
