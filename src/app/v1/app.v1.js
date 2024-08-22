@@ -7,10 +7,11 @@ const { Strategy: JwtStrategy, ExtractJwt } = passportJWT;
 const app = express();
 
 //controllers
-import { applyForCard, createAccount, createCustomer, deleteCustomer, depositMoney, generatePIN, getBalance, getCardDetails, getCustomers, pingTest, test, transactionHistory, transferMoney, updatePIN, withdrawMoney } from '../v1/controllers/test.controller.js';
+import { pingTest, test } from '../v1/controllers/test.controller.js';
 
 //routers
 import testRouter from '../v1/routes/test.routes.js';
+import bankRouter from '../v1/routes/bank.routes.js';  // New router file
 
 //defining the JWT strategy
 const passportStrategy = new JwtStrategy({
@@ -36,45 +37,7 @@ const handleOptionsReq = (req, res, next) => {
 //test routes
 app.get('/test', test);
 app.get('/test/ping', pingTest);
-
-// get all customers
-app.get('/bank/getCustomers', getCustomers);
-
-// create customer
-app.post('/bank/createCustomer', createCustomer)
-
-// create account
-app.post('/bank/createAccount', createAccount);
-
-// deposit money
-app.put('/bank/depositMoney', depositMoney);
-
-// withdraw money
-app.put('/bank/withdrawMoney', withdrawMoney);
-
-// transfer money
-app.post('/bank/transferMoney', transferMoney);
-
-// get transaction history
-app.get('/bank/transactionHistory', transactionHistory);
-
-// delete customer
-app.delete('/bank/deleteCustomer', deleteCustomer);
-
-// get check balance of account
-app.get('/bank/getBalance', getBalance);
-
-// apply for a card
-app.post('/bank/applyForCard', applyForCard);
-
-// get card details
-app.get('/bank/getCardDetails', getCardDetails);
-
-// generate PIN for card
-app.put('/bank/generatePIN', generatePIN);
-
-// update PIN number --> user gives custom PIN number
-app.put('/bank/updatePIN', updatePIN);
+app.use('/bank', bankRouter);  // Bank-related routes
 
 
 //secured routes - auth using user JWT
