@@ -1,9 +1,18 @@
 import express from 'express';
 
-import { applyForCard,  createAccount, createCustomer, deleteCustomer, depositMoney, generatePIN, getBalance, getCardDetails, transactionHistory, transferMoney, updatePIN, withdrawMoney } from '../controllers/test.controller.js';
+import { applyForCard, createAccount, createCustomer, deleteCustomer, 
+         depositMoney, generatePIN, getBalance, getCardDetails, 
+         transactionHistory, transferMoney, updatePIN, withdrawMoney } from '../controllers/test.controller.js';
 
 const router = express.Router();
 
+// register to bank
+// router.post('/registerUser', registerUser);
+
+// login
+// router.post('/login', login);
+
+// create customer and login
 router.post('/createCustomer', createCustomer);
 
 // create accout

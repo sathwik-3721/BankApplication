@@ -41,6 +41,25 @@ export async function pingTest(req, res) {
     }
 }
 
+// export async function registerUser(req, res) {
+//     try {
+//         const { email, password } = req.body;
+//         const validateEmailResult = await Test.validateEmail(email);
+//         if (!validateEmailResult) {
+//             return res.status(409).json({error: 'Email already exists. Please Login'});
+//         } else {
+//             const registerUserResult = await Test.registerUser(email, password);
+//             if (registerUserResult.affectedRows > 0) {
+//                 return res.status(201).json({message: 'User and password created'});
+//             } else {
+//                 return res.status(500).json({error: 'Internal server error'});
+//             }
+//         }
+//     } catch(err) {
+//         return res.status(409).json({error: 'Error occured, Mail must'});
+//     }
+// }
+
 export async function getCustomers(req, res) {
     try {
         // const [user, password] = req.body;
@@ -61,8 +80,8 @@ export async function getCustomers(req, res) {
 
 export async function createCustomer(req, res) {
     try {
-        const {first_name, last_name, mobile_num, email, pancard_num, dob, account_type} = req.body;
-        const createResult = await Test.createCustomer(first_name, last_name, mobile_num, email, pancard_num, dob, account_type);
+        const {first_name, last_name, mobile_num, email, pancard_num, dob, account_type, password } = req.body;
+        const createResult = await Test.createCustomer(first_name, last_name, mobile_num, email, pancard_num, dob, account_type, password);
         if (createResult) {
             return res.status(201).json({message: "Customer Created"});
         } else {
@@ -73,9 +92,23 @@ export async function createCustomer(req, res) {
     }
 }
 
+export async function login(req, res) {
+    try {
+        const { email, password } = req.body;
+        const validateLoginResult = await Test.validateLogin(email, password);
+        if (validateLoginResult) {
+            res.status(200).json({message: 'Login successful'});
+        } else {
+            res.status(404).json({error: 'Error while login'});
+        }
+    } catch(err) {
+        throw err;
+    }
+}
+
 export async function createAccount(req, res) {
     try {
-        const {customer_id, balance, account_type} = req.body;
+        const {customer_id, balance, account_type } = req.body;
         const validateAccountResult = await Test.validateAccount(customer_id);
         if (!validateAccountResult) {
             console.log("if1");

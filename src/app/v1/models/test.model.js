@@ -62,7 +62,7 @@ class Test {
         }
     }
 
-    static async createCustomer(first_name, last_name, mobile_num, email, pancard_num, dob, account_type) {
+    static async createCustomer(first_name, last_name, mobile_num, email, pancard_num, dob, account_type, password) {
         try {
             const pool = await poolPromise;
             const validateCustomerResult = await Test.validateCustomer(mobile_num, email, pancard_num);
@@ -70,10 +70,31 @@ class Test {
             if (!(validateCustomerResult.length != 0)) {
                 return false;
             } else {
-                const sql = 'INSERT INTO Customers (first_name, last_name, mobile_num, email, pancard_num, dob, account_type) VALUES (?, ?, ?, ?, ?, ?, ?)';
-                const [res] = await pool.query(sql, [first_name, last_name, mobile_num, email, pancard_num, dob, account_type]);
+                const sql = 'INSERT INTO Customers (first_name, last_name, mobile_num, email, pancard_num, dob, account_type, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
+                const [res] = await pool.query(sql, [first_name, last_name, mobile_num, email, pancard_num, dob, account_type, password]);
                 console.log(res);
                 return res;
+            }
+        } catch(err) {
+            throw err;
+        }
+    }
+
+    static async validateLogin(email, password) {
+        try {
+            const pool = await poolPromise;
+            const sql = 'SELECT * from Customers WHERE email = ? AND password = ?';
+            const [res] = await pool.query(sql, [email, password]);
+            if (res.length === 0) {
+                return false;
+            } else {
+                const existEmail = res[0].email;
+                const existPassword = res[0].password;
+                if (email === existEmail && password === existPassword) {
+                    return true;
+                } else {
+                    return false;
+                }
             }
         } catch(err) {
             throw err;
@@ -444,6 +465,29 @@ class Test {
             throw err;
         }
     }
+
+    static async validateEmail(email) {
+        try {
+            const pool = await poolPromise;
+            const sql = 'SELECT * FROM Users WHERE email = ?';
+            const [res] = await pool.query(sql, [email]);
+            console.log(res);
+            return res;
+        } catch(err) {
+            throw err;
+        }
+    }
+
+    // static async registerUser(email, password) {
+    //     try {
+    //         const pool = await poolPromise;
+    //         const sql = 'INSERT INTO Users (email, password) VALUES (?, ?)';
+    //         const [res] = await pool.query(sql, [email, password]);
+    //         return res;
+    //     } catch(err) {
+    //         throw err;
+    //     }
+    // }
         
 }
 

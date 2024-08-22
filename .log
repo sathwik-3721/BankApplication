@@ -468,3 +468,76 @@
 {"body":{"account_number":"98765ABCDE"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/getCardDetails","query":{},"responseTime":6,"status":"success","timestamp":"2024-08-22T11:04:22.128Z","userAgent":"PostmanRuntime/7.41.1"}
 {"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T11:04:57.371Z"}
 {"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T11:04:57.398Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T13:30:09.455Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T13:30:09.485Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T13:30:18.385Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T13:30:18.412Z"}
+{"body":{"email":"john.doe@example.com","password":"John@123"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/v1/bankregisterUser","query":{},"responseTime":14,"status":"failed","timestamp":"2024-08-22T13:31:39.164Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"email":"john.doe@example.com","password":"John@123"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/registerUser","query":{},"responseTime":29,"status":"failed","timestamp":"2024-08-22T13:31:48.719Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T13:32:10.305Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T13:32:10.340Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T13:33:33.994Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T13:33:34.021Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T13:33:40.995Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T13:33:41.022Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T13:33:58.410Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T13:33:58.464Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T13:34:37.469Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T13:34:37.495Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T13:36:24.924Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T13:36:24.952Z"}
+{"body":{"email":"john.doe@example.com","password":"John@123"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/registerUser","query":{},"responseTime":42,"status":"failed","timestamp":"2024-08-22T13:36:26.516Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"email":"jane.doe@example.com","password":"Jane@123"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/registerUser","query":{},"responseTime":28,"status":"success","timestamp":"2024-08-22T13:36:50.033Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"email":"christine.july@example.com","password":"123"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/registerUser","query":{},"responseTime":27,"status":"success","timestamp":"2024-08-22T13:37:08.282Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"email":"jack.henry@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/registerUser","query":{},"responseTime":22,"status":"success","timestamp":"2024-08-22T13:37:21.645Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"email":"harry.potter@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/registerUser","query":{},"responseTime":34,"status":"success","timestamp":"2024-08-22T13:37:31.353Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"email":"jinny.potter@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/registerUser","query":{},"responseTime":19,"status":"success","timestamp":"2024-08-22T13:37:40.498Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"email":"ron.weasly@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/registerUser","query":{},"responseTime":34,"status":"success","timestamp":"2024-08-22T13:37:48.951Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"email":"er.weasly@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/registerUser","query":{},"responseTime":5,"status":"failed","timestamp":"2024-08-22T13:39:29.294Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"email":"123.weasly@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/registerUser","query":{},"responseTime":7,"status":"failed","timestamp":"2024-08-22T13:39:37.425Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T13:40:06.006Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T13:40:06.032Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T13:55:31.950Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T13:55:31.988Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T13:56:04.601Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T13:56:04.630Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T14:07:40.720Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T14:07:40.746Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T14:09:04.057Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T14:09:04.087Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T14:09:26.816Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T14:09:26.844Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T14:10:27.700Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T14:10:27.729Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T14:10:31.643Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T14:10:31.672Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T14:10:56.007Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T14:10:56.035Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T14:11:13.217Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T14:11:13.244Z"}
+{"level":"info","message":"inside test","timestamp":"2024-08-22T14:12:24.227Z"}
+{"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/test","query":{},"responseTime":18,"status":"success","timestamp":"2024-08-22T14:12:24.241Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"account_number":"90090BCAAF"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/getBalance","query":{},"responseTime":11,"status":"failed","timestamp":"2024-08-22T14:12:35.518Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"account_number":"90090BCAAF"},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/getBalance","query":{},"responseTime":25,"status":"success","timestamp":"2024-08-22T14:12:43.075Z","userAgent":"PostmanRuntime/7.41.1"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T14:40:59.227Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T14:40:59.255Z"}
+{"body":{"email":"jane.doe@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/login","query":{},"responseTime":10,"status":"failed","timestamp":"2024-08-22T14:41:03.578Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0"}
+{"body":{"email":"jane.doe@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/login","query":{},"responseTime":2,"status":"failed","timestamp":"2024-08-22T14:41:04.647Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0"}
+{"body":{"email":"jane.doe@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/login","query":{},"responseTime":1,"status":"failed","timestamp":"2024-08-22T14:41:06.173Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0"}
+{"body":{"email":"jane.doe@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/login","query":{},"responseTime":13,"status":"success","timestamp":"2024-08-22T14:42:49.208Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"email":"jane.doe@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/login","query":{},"responseTime":2,"status":"success","timestamp":"2024-08-22T14:42:55.115Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0"}
+{"body":{"email":"jane.doe@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/login","query":{},"responseTime":2,"status":"success","timestamp":"2024-08-22T14:42:55.771Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0"}
+{"body":{"email":"jane.doe@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/login","query":{},"responseTime":2,"status":"success","timestamp":"2024-08-22T14:42:56.348Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-08-22T14:45:51.571Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-08-22T14:45:51.600Z"}
+{"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/v1/login","query":{},"responseTime":13,"status":"failed","timestamp":"2024-08-22T14:45:54.898Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"email":"jane.doe@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/login","query":{},"responseTime":26,"status":"success","timestamp":"2024-08-22T14:46:03.195Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"email":"jane.doe@example.com","password":"123"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/login","query":{},"responseTime":4,"status":"failed","timestamp":"2024-08-22T14:46:08.238Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"email":"jane.doe@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/login","query":{},"responseTime":1,"status":"failed","timestamp":"2024-08-22T14:48:13.218Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0"}
+{"body":{"email":"jane.doe@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/login","query":{},"responseTime":5,"status":"success","timestamp":"2024-08-22T14:48:31.452Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"email":"jane.doe@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/login","query":{},"responseTime":1,"status":"failed","timestamp":"2024-08-22T14:48:41.113Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0"}
+{"body":{"email":"jane.doe@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/login","query":{},"responseTime":1,"status":"failed","timestamp":"2024-08-22T14:48:41.620Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0"}
+{"body":{"email":"jane.doe@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/login","query":{},"responseTime":1,"status":"failed","timestamp":"2024-08-22T14:48:42.270Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0"}
+{"body":{"email":"jane.doe@example.com","password":"1234"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/login","query":{},"responseTime":8,"status":"success","timestamp":"2024-08-22T14:49:22.192Z","userAgent":"PostmanRuntime/7.41.1"}
+{"body":{"password":"1234","username":"jane.doe@example.com"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/login","query":{},"responseTime":2,"status":"failed","timestamp":"2024-08-22T14:54:15.926Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0"}
+{"body":{"password":"1234","username":"jane.doe@example.com"},"ip":"::1","level":"info","message":"HTTP Request","method":"POST","path":"/login","query":{},"responseTime":1,"status":"failed","timestamp":"2024-08-22T14:54:17.205Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0"}
