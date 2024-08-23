@@ -95,6 +95,7 @@ export async function createCustomer(req, res) {
       account_type,
       password,
     } = req.body;
+    console.log("req.body", req.body);
     const createResult = await Test.createCustomer(
       first_name,
       last_name,
@@ -106,7 +107,17 @@ export async function createCustomer(req, res) {
       password
     );
     if (createResult) {
-      return res.status(201).json({ message: "Customer Created" });
+        console.log("email", email);
+        const getCustomerIDResult = await Test.getCustomerID(email);
+        if (getCustomerIDResult.length > 0) {
+            const customer_id_result = getCustomerIDResult[0].customer_id;
+            return res.status(201).json({
+                message: "Please store the customer_id as it is important for account creation.",
+                customer_id: customer_id_result,
+              }); 
+        } else {
+            return res.status(400).json({error: 'niub'});
+        }
     } else {
       return res.status(422).json({ error: "Error while creating" });
     }
@@ -118,6 +129,8 @@ export async function createCustomer(req, res) {
 export async function login(req, res) {
   try {
     const { email, password } = req.body;
+    console.log(email, password);
+
     const validateLoginResult = await Test.validateLogin(email, password);
     if (validateLoginResult) {
       res.status(200).json({ message: "Login successful" });

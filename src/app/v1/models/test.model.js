@@ -55,7 +55,7 @@ class Test {
             const pool = await poolPromise;
             const sql = 'SELECT mobile_num, email, pancard_num FROM Customers';
             const [res] = await pool.query(sql, [mobile_num, email, pancard_num]);
-            console.log(res);
+            // console.log(res);
             return res;
         } catch(err) {
             throw err;
@@ -66,7 +66,7 @@ class Test {
         try {
             const pool = await poolPromise;
             const validateCustomerResult = await Test.validateCustomer(mobile_num, email, pancard_num);
-            console.log(validateCustomerResult);
+            // console.log(validateCustomerResult);
             if (!(validateCustomerResult.length != 0)) {
                 return false;
             } else {
@@ -75,6 +75,18 @@ class Test {
                 console.log(res);
                 return res;
             }
+        } catch(err) {
+            throw err;
+        }
+    }
+
+    static async getCustomerID(email) {
+        try {
+            const pool = await poolPromise;
+            const sql = 'SELECT * FROM Customers WHERE email = ?';
+            const [res] = await pool.query(sql, [email]);
+            console.log("res:", res)
+            return res;
         } catch(err) {
             throw err;
         }

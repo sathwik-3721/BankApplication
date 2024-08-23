@@ -38,7 +38,7 @@ const handleOptionsReq = (req, res, next) => {
 app.get('/test', test);
 app.get('/test/ping', pingTest);
 app.post('/login', login);
-app.use('/bank', passport.authenticate('jwt', { session: false }), bankRouter);  // Bank-related routes
+app.use('/bank', bankRouter);  // Bank-related routes
 
 
 //secured routes - auth using user JWT
