@@ -85,27 +85,9 @@ export async function getCustomers(req, res) {
 
 export async function createCustomer(req, res) {
   try {
-    const {
-      first_name,
-      last_name,
-      mobile_num,
-      email,
-      pancard_num,
-      dob,
-      account_type,
-      password,
-    } = req.body;
+    const { first_name, last_name, mobile_num, email, pancard_num, dob, account_type, password} = req.body;
     console.log("req.body", req.body);
-    const createResult = await Test.createCustomer(
-      first_name,
-      last_name,
-      mobile_num,
-      email,
-      pancard_num,
-      dob,
-      account_type,
-      password
-    );
+    const createResult = await Test.createCustomer(first_name, last_name, mobile_num, email, pancard_num, dob, account_type, password);
     if (createResult) {
         console.log("email", email);
         const getCustomerIDResult = await Test.getCustomerID(email);
@@ -144,26 +126,21 @@ export async function login(req, res) {
 
 export async function createAccount(req, res) {
   try {
-    const { customer_id, balance, account_type } = req.body;
+    const { customer_id, balance, account_type, email } = req.body;
     const validateAccountResult = await Test.validateAccount(customer_id);
-    if (!validateAccountResult) {
+    const validateUserResult = await Test.validateUser(customer_id, email);
+    if (!validateAccountResult && validateUserResult) {
       console.log("if1");
-      const createAccountResult = await Test.createAccount(
-        customer_id,
-        balance,
-        account_type
-      );
+      const createAccountResult = await Test.createAccount(customer_id, balance, account_type);
       console.log(createAccountResult);
       if (!createAccountResult) {
-        res
-          .status(409)
-          .json({ error: "Duplicate entry - Account number already exists" });
+        res.status(409).json({ error: "Duplicate entry - Account number already exists" });
       } else {
         res.status(201).json({ message: "Account Number generated" });
       }
-    } //else {
-
-    //}
+    } else {
+        return res.status(400).json({error: 'Internal server error (check email and account number related)'});
+    }
   } catch (err) {
     throw err;
   }
@@ -207,6 +184,7 @@ export async function withdrawMoney(req, res) {
     if (account.balance < amount) {
       return res.status(400).json({ error: "Insufficient funds" });
     }
+    
 
     const withdrawResult = await Test.withdrawMoney(account_number, amount);
 

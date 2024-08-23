@@ -113,6 +113,22 @@ class Test {
         }
     }
 
+    static async validateUser(customer_id, email) {
+        try {
+            const pool = await poolPromise;
+            const sql = 'SELECT * FROM Customers WHERE customer_id = ? AND email = ?';
+            const [res] = await pool.query(sql, [customer_id, email]);
+            console.log(res);
+            if (res.length === 0) {
+                return false;
+            } else {
+                return true;
+            }
+        } catch(err){
+            throw err;
+        }
+    }
+
     static async validateAccount(customer_id) {
         try {
             const pool = await poolPromise;
@@ -135,22 +151,17 @@ class Test {
             console.log("in createAccountNumber");
             const pool = await poolPromise;
             console.log("after pool in createAccountNUmber");
-            const sql = 'SELECT mobile_num, pancard_num FROM Customers WHERE customer_id = ?';
-            const [res] = await pool.query(sql, [customer_id]);
-            console.log("mob", res);
-            if (res.length != 0) {
-                let mobileNum = res[0].mobile_num;
-                let pancardNum = res[0].pancard_num;
-                let accountNumber = mobileNum.substring(0, 5) + pancardNum.substring(0, 5);
-                console.log(accountNumber);
-                return accountNumber;
-            } else {
-                return false;
+    
+            let accountNumber = '';
+            for (let i = 0; i < 16; i++) {
+                accountNumber += Math.floor(Math.random() * 10).toString();
             }
+            console.log("Generated Account Number:", accountNumber);
+            return accountNumber;
         } catch(err) {
             throw err;
         }
-    }
+    }    
 
     static async createAccount(customer_id, balance, account_type) {
         try {
