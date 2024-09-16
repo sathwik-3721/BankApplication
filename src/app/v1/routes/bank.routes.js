@@ -2,15 +2,15 @@ import express from 'express';
 
 import { applyForCard, createAccount, createCustomer, deleteCustomer, 
          depositMoney, generatePIN, getBalance, getCardDetails, 
-         transactionHistory, transferMoney, updatePIN, withdrawMoney } from '../controllers/test.controller.js';
+         transactionHistory, transferMoney, updatePIN, withdrawMoney, login, getBalanceByCid, getTransactionByMail } from '../controllers/test.controller.js';
 
 const router = express.Router();
 
 // register to bank
 // router.post('/registerUser', registerUser);
 
-// login
-// router.post('/login', login);
+login
+router.post('/login', login);
 
 // create customer and login
 router.post('/createCustomer', createCustomer);
@@ -47,5 +47,11 @@ router.put('/generatePIN', generatePIN);
 
 // update pin for it
 router.put('/updatePIN', updatePIN);
+
+// get balanve type 2
+router.get('/getBalanceCid/:email', getBalanceByCid)
+
+// get transaction by mail
+router.get('/getTransactionByMail/:email', getTransactionByMail)
 
 export default router;

@@ -129,6 +129,28 @@ class Test {
         }
     }
 
+    static async getAccountByCustomerID(customer_id) {
+        try {
+            const pool = await poolPromise;
+            const sql = 'SELECT account_number FROM Accounts WHERE customer_id = ?';
+            const [res] = await pool.query(sql, [customer_id]);
+            return res[0].account_number;
+        } catch (err) {
+            throw err;
+        }
+    }
+
+    static async getCustomerByMail(email) {
+        try {
+            const pool = await poolPromise;
+            const sql = 'SELECT customer_id FROM Customers WHERE email = ?';
+            const [res] = await pool.query(sql, [email]);
+            return res[0].customer_id;
+        } catch (err) {
+            throw err;
+        }
+    }
+
     static async validateAccount(customer_id) {
         try {
             const pool = await poolPromise;

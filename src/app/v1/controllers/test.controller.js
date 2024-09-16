@@ -276,11 +276,51 @@ export async function getBalance(req, res) {
     console.log("is exist", accountResult);
     if (accountResult) {
       const balanceResult = await Test.getBalance(account_number);
-      res.status(200).json(balanceResult);
+      return res.status(200).json(balanceResult);
     } else {
-      res.status(404).json({ error: "Account not exists" });
+      return res.status(404).json({ error: "Account not exists" });
     }
   } catch (err) {
+    throw err;
+  }
+}
+
+export async function getBalanceByCid(req, res) {
+  try {
+    const { email } = req.params;
+    console.log("email", email);
+    const customer_id = await Test.getCustomerByMail(email);
+    console.log("customer is", customer_id);
+    const account_number = await Test.getAccountByCustomerID(customer_id);
+    console.log("account number", account_number);
+    const validAccountResult = await Test.isValidAccount(account_number);
+    if (validAccountResult) {
+      const balanceAmount = await Test.getBalance(account_number);
+      return res.status(200).json(balanceAmount);
+    } else {
+      return res.status(404).json({ error: 'Account not found' });
+    }
+  } catch (err) {
+    return res.status(400).json({ error: 'No account found'});
+  }
+}
+
+export async function getTransactionByMail(req, res) {
+  try {
+    const { email } = req.params;
+    console.log("email", email);
+    const customer_id = await Test.getCustomerByMail(email);
+    console.log("customer is", customer_id);
+    const account_number = await Test.getAccountByCustomerID(customer_id);
+    console.log("account number", account_number);
+    const validAccountResult = await Test.isValidAccount(account_number);
+    if (validAccountResult) {
+      const transactionHistory = await Test.getTransactionHistory(account_number);
+      return res.status(200).json(transactionHistory);
+    } else {
+      return res.status(404).json({ error: 'Account not found' });
+    }
+  } catch(err) {
     throw err;
   }
 }
