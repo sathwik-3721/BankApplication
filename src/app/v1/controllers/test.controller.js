@@ -129,22 +129,29 @@ export async function createAccount(req, res) {
     const { customer_id, balance, account_type, email } = req.body;
     const validateAccountResult = await Test.validateAccount(customer_id);
     const validateUserResult = await Test.validateUser(customer_id, email);
+
     if (!validateAccountResult && validateUserResult) {
       console.log("if1");
       const createAccountResult = await Test.createAccount(customer_id, balance, account_type);
       console.log(createAccountResult);
+
       if (!createAccountResult) {
         res.status(409).json({ error: "Duplicate entry - Account number already exists" });
       } else {
-        res.status(201).json({ message: "Account Number generated" });
+        res.status(201).json({
+          message: "Account Number generated",
+          accountNumber: createAccountResult.accountNumber
+        });
       }
     } else {
-        return res.status(400).json({error: 'Internal server error (check email and account number related)'});
+      return res.status(400).json({ error: 'Internal server error (check email and account number related)' });
     }
   } catch (err) {
-    throw err;
+    console.error(err); // Log the error for debugging
+    res.status(500).json({ error: 'Internal server error' }); // Send a proper error response
   }
 }
+
 
 export async function depositMoney(req, res) {
   try {

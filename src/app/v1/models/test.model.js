@@ -197,12 +197,16 @@ class Test {
                 const sql = 'INSERT INTO Accounts (customer_id, balance, acc_status, account_type, account_number) VALUES (?, ?, ?, ?, ?)';
                 const [res] = await pool.query(sql, [customer_id, balance, "Active", account_type, createAccountNumberResult]);
                 console.log(res);
-                return res;
+                return {
+                    result: res,
+                    accountNumber: createAccountNumberResult
+                };
             }
         } catch(err) {
             throw err;
         }
     }
+    
 
     static async getAccountByNumber(account_number) {
         try {
