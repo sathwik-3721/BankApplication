@@ -321,16 +321,27 @@ class Test {
         }
     }    
 
+    static async isValidCard(account_number, card_type) {
+        try {
+            const pool = await poolPromise;
+            const sql = 'SELECT * FROM Cards WHERE account_number = ? AND card_type = ?';
+            const [res] = await pool.query(sql, [account_number, card_type]);
+            return res.length !== 0;  // Return true if a card of the same type exists
+        } catch (err) {
+            throw err;
+        }
+    }    
+     
     static async isValidAccount(account_number) {
         try {
             const pool = await poolPromise;
             const sql = 'SELECT * FROM Accounts WHERE account_number = ?';
             const [res] = await pool.query(sql, [account_number]);
-            return res.length !== 0;
+            return res.length !== 0;  // Return true if account exists
         } catch (err) {
             throw err;
         }
-    }    
+    }
     
     static async deleteFromAccounts(account_number) {
         try {
@@ -428,20 +439,39 @@ class Test {
         try {
             const pool = await poolPromise;
             const card_number = await this.generateCardNumber();
-            console.log("cardn", card_number)
-            const isValidCardResult = await this.isValidCard(account_number);
-            console.log("isvalidacc", isValidCardResult);
-            if (isValidCardResult) {
-                const sql = 'INSERT INTO Cards (account_number, card_number, card_type) VALUES (?, ?, ?)';
-                const [res] = await pool.query(sql, [account_number, card_number, card_type]);
-                return res;
-            } else {
-                return null;
+            console.log("cardn", card_number);
+    
+            // Check if the requested card type already exists for the account
+            const isCardTypeExists = await this.isValidCard(account_number, card_type);
+    
+            // Check if any card exists for the account
+            const sqlCheckAllCards = 'SELECT * FROM Cards WHERE account_number = ?';
+            const [allCards] = await pool.query(sqlCheckAllCards, [account_number]);
+    
+            // Determine if more cards can be added
+            const hasCreditCard = allCards.some(card => card.card_type === 'credit');
+            const hasDebitCard = allCards.some(card => card.card_type === 'debit');
+    
+            if (card_type === 'credit' && hasCreditCard) {
+                return null;  // A credit card already exists
             }
-        } catch(err) {
+    
+            if (card_type === 'debit' && hasDebitCard) {
+                return null;  // A debit card already exists
+            }
+    
+            if (!isCardTypeExists) {
+                const sqlInsert = 'INSERT INTO Cards (account_number, card_number, card_type) VALUES (?, ?, ?)';
+                const [res] = await pool.query(sqlInsert, [account_number, card_number, card_type]);
+                return { card_number };  // Return the card number if insertion is successful
+            } else {
+                return null;  // A card of the requested type already exists
+            }
+        } catch (err) {
             throw err;
         }
     }
+    
 
     static async getCardDetails(account_number) {
         try {
@@ -527,16 +557,18 @@ class Test {
         }
     }
 
-    // static async registerUser(email, password) {
-    //     try {
-    //         const pool = await poolPromise;
-    //         const sql = 'INSERT INTO Users (email, password) VALUES (?, ?)';
-    //         const [res] = await pool.query(sql, [email, password]);
-    //         return res;
-    //     } catch(err) {
-    //         throw err;
-    //     }
-    // }
+    static async getUserName(email) {
+        try {
+            const pool = await poolPromise;
+            const sql = 'SELECT * FROM Customers WHERE email = ?';
+            const [res] = await pool.query(sql, [email]);
+            const first_name = res[0].first_name;
+            const last_name = res[0].last_name;
+            return first_name + " " + last_name;
+        } catch(err) {
+            throw err;
+        }
+    }
         
 }
 

@@ -2,7 +2,8 @@ import express from 'express';
 
 import { applyForCard, createAccount, createCustomer, deleteCustomer, 
          depositMoney, generatePIN, getBalance, getCardDetails, 
-         transactionHistory, transferMoney, updatePIN, withdrawMoney, login, getBalanceByCid, getTransactionByMail } from '../controllers/test.controller.js';
+         transactionHistory, transferMoney, updatePIN, withdrawMoney, 
+         login, getBalanceByCid, getTransactionByMail, getUserName, getAccnoByMail } from '../controllers/test.controller.js';
 
 const router = express.Router();
 
@@ -40,7 +41,7 @@ router.get('/getBalance', getBalance);
 router.post('/applyForCard', applyForCard);
 
 // get card details based on acc_no
-router.get('/getCardDetails', getCardDetails);
+router.get('/getCardDetails/:account_number', getCardDetails);
 
 // generate default pin for a card
 router.put('/generatePIN', generatePIN);
@@ -53,5 +54,11 @@ router.get('/getBalanceCid/:email', getBalanceByCid)
 
 // get transaction by mail
 router.get('/getTransactionByMail/:email', getTransactionByMail)
+
+// get user name
+router.get('/getUserName/:email', getUserName)
+
+// get account number using email
+router.get('/getAccnoByMail/:email', getAccnoByMail);
 
 export default router;

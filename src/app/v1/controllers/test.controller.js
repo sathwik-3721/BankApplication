@@ -332,44 +332,62 @@ export async function getTransactionByMail(req, res) {
   }
 }
 
-export async function applyForCard(req, res) {
+export async function getAccnoByMail(req, res) { 
   try {
-    const { account_number, card_type } = req.body;
-    console.log(req.body);
-    const new_card_type = card_type.toLowerCase();
-    const isValidAccount = await Test.isValidAccount(account_number);
-    if (!isValidAccount) {
-      return res.status(404).json({ error: "Account not exists" });
-    }
-
-    if (new_card_type !== "credit" && new_card_type !== "debit") {
-      return res.status(400).json({ error: "Invalid card type" });
-    }
-
-    const applyForCardReslut = await Test.applyForCard(
-      account_number,
-      card_type
-    );
-    console.log("applyforcardres", applyForCardReslut);
-    if (applyForCardReslut !== null) {
-      return res
-        .status(201)
-        .json({ message: "Card has been sucessfully generated" });
+    const { email } = req.params;
+    console.log("email", email);
+    const customer_id = await Test.getCustomerByMail(email);
+    console.log("customer is", customer_id);
+    const account_number = await Test.getAccountByCustomerID(customer_id);
+    console.log("account number", account_number);
+    const validAccountResult = await Test.isValidAccount(account_number);
+    if (validAccountResult) {
+      return res.status(200).json({ message: "Account number found", acc_no: account_number});
     } else {
-      return res
-        .status(409)
-        .json({
-          error: "Card number already exist for the given account number",
-        });
+      return res.status(404).json({ error: "Not a valid account"});
     }
   } catch (err) {
-    throw err;
+    return res.status(500).json({ error: "Account not found"});
+  }
+}
+
+export async function applyForCard(req, res) {
+  try {
+      const { account_number, card_type } = req.body;
+      console.log(req.body);
+
+      const new_card_type = card_type.toLowerCase();  // Normalize the card type to lowercase
+      const isValidAccount = await Test.isValidAccount(account_number);
+      if (!isValidAccount) {
+          return res.status(404).json({ error: "Account does not exist" });
+      }
+
+      if (new_card_type !== "credit" && new_card_type !== "debit") {
+          return res.status(400).json({ error: "Invalid card type" });
+      }
+
+      const applyForCardResult = await Test.applyForCard(account_number, new_card_type);
+      console.log("applyforcardres", applyForCardResult);
+
+      if (applyForCardResult !== null) {
+          return res.status(201).json({
+              message: `Your ${new_card_type} card has been successfully generated`,
+              card_number: applyForCardResult.card_number  // Include the card number in the response
+          });
+      } else {
+          return res.status(409).json({
+              error: `A ${new_card_type} card already exists for this account. Only one credit and one debit card are allowed per account.`,
+          });
+      }
+  } catch (err) {
+      console.error(err);  // Added error logging
+      return res.status(500).json({ error: "Internal server error" });  // Return a 500 status for internal errors
   }
 }
 
 export async function getCardDetails(req, res) {
   try {
-    const { account_number } = req.body;
+    const { account_number } = req.params;
     console.log(req.body);
     const getCardDetailsResult = await Test.getCardDetails(account_number);
     if (getCardDetailsResult.length > 0) {
@@ -394,8 +412,9 @@ export async function generatePIN(req, res) {
     const isValidPINResult = await Test.isValidPIN(pin);
     if (!isValidCardResult && isValidAccountResult && isValidPINResult) {
       const pinResult = await Test.generatePIN(card_number, pin);
+      console.log("Pin result", pinResult);
       if (pinResult.affectedRows > 0) {
-        return res.status(200).json({ message: "Pin generated sucessfully" });
+        return res.status(200).json({ message: "Pin generated sucessfully", pin: pin });
       } else {
         return res.status(404).json({ error: "Card number not exists" });
       }
@@ -421,5 +440,22 @@ export async function updatePIN(req, res) {
         .status(409)
         .json({ error: "Check pin number or account number" });
     }
-  } catch (err) {}
+  } catch (err) {
+    throw err;
+  }
+}
+
+export async function getUserName(req, res) {
+  try {
+    const { email } = req.params;
+    console.log("email ", email);
+    const userNameResult = await Test.getUserName(email);
+    if (userNameResult.length != 0) {
+      return res.status(200).json({ name: userNameResult});
+    } else {
+      return res.status(404).json({ error: "Username not found"})
+    }
+  } catch (err) {
+      throw err;
+  }
 }
