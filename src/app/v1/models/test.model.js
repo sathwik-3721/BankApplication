@@ -579,6 +579,24 @@ class Test {
             throw err;
         }
     }
+
+    static async updatePassword(email, new_password) {
+        try {
+            console.log("email ", email);
+            console.log("password ", new_password);
+            const pool = await poolPromise;
+            const sql = 'UPDATE Customers SET password = ? WHERE email = ?';
+            const [res] = await pool.query(sql, [new_password, email]);
+            console.log("res ", res);
+            if(res.affectedRows > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (err) {
+            throw err;
+        }
+    }
         
 }
 

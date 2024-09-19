@@ -112,12 +112,35 @@ export async function login(req, res) {
   try {
     const { email, password } = req.body;
     console.log(email, password);
-
+    const token = sign({ payload: "payload" }, "superSecret", {
+      expiresIn: "1d", // expires in 24 hours
+    });
     const validateLoginResult = await Test.validateLogin(email, password);
     if (validateLoginResult) {
-      res.status(200).json({ message: "Login successful" });
+      res.status(200).json({ message: "Login successful", token: token});
+
     } else {
       res.status(404).json({ error: "Error while login" });
+    }
+  } catch (err) {
+    throw err;
+  }
+}
+
+export async function updatePassword(req, res) {
+  try {
+    const { email, password, new_password } = req.body;
+    console.log("req body-", req.body);
+    if (password === new_password) {
+      const updatePasswordResult = await Test.updatePassword(email, new_password);
+      console.log("update password res", updatePasswordResult);
+      if (updatePasswordResult) {
+        res.status(200).json({ message: "Password updated sucessfully"});
+      } else {
+        res.status(400).json({ error: "Please check new password is not similar to old passoword"});
+      }
+    } else {
+      return res.status(401).json({ message: "Passwords do not match"});
     }
   } catch (err) {
     throw err;

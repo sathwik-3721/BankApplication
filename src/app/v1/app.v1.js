@@ -7,7 +7,7 @@ const { Strategy: JwtStrategy, ExtractJwt } = passportJWT;
 const app = express();
 
 //controllers
-import { pingTest, test, login } from '../v1/controllers/test.controller.js';
+import { pingTest, test, login, updatePassword } from '../v1/controllers/test.controller.js';
 
 //routers
 import testRouter from '../v1/routes/test.routes.js';
@@ -38,7 +38,9 @@ const handleOptionsReq = (req, res, next) => {
 app.get('/test', test);
 app.get('/test/ping', pingTest);
 app.post('/login', login);
-app.use('/bank', bankRouter);  // Bank-related routes
+// forget password route
+app.put('/updatePassword', updatePassword);
+app.use('/bank', passport.authenticate('jwt', { session: false }), bankRouter);  // Bank-related routes
 
 
 //secured routes - auth using user JWT

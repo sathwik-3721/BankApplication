@@ -3,14 +3,15 @@ import express from 'express';
 import { applyForCard, createAccount, createCustomer, deleteCustomer, 
          depositMoney, generatePIN, getBalance, getCardDetails, 
          transactionHistory, transferMoney, updatePIN, withdrawMoney, 
-         login, getBalanceByCid, getTransactionByMail, getUserName, getAccnoByMail, getCardNumbers } from '../controllers/test.controller.js';
+         login, getBalanceByCid, getTransactionByMail, getUserName, 
+         getAccnoByMail, getCardNumbers } from '../controllers/test.controller.js';
 
 const router = express.Router();
 
 // register to bank
 // router.post('/registerUser', registerUser);
 
-login
+// login
 router.post('/login', login);
 
 // create customer and login
