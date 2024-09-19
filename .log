@@ -3732,3 +3732,123 @@
 {"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/getBalanceCid/w.addams@example.com","query":{},"responseTime":4,"status":"success","timestamp":"2024-09-18T19:12:02.017Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"}
 {"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/getUserName/w.addams@example.com","query":{},"responseTime":3,"status":"success","timestamp":"2024-09-18T19:12:02.023Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"}
 {"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/getTransactionByMail/w.addams@example.com","query":{},"responseTime":12,"status":"success","timestamp":"2024-09-18T19:12:02.036Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T08:57:54.785Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T08:57:54.816Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T08:57:55.896Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T08:57:55.924Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T08:58:22.434Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T08:58:22.461Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T08:58:38.507Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T08:58:38.534Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T08:58:43.621Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T08:58:43.647Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T08:59:16.125Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T08:59:16.155Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T08:59:20.911Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T08:59:20.936Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T08:59:23.299Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T08:59:23.326Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T08:59:31.095Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T08:59:31.120Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T08:59:34.317Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T08:59:34.342Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T08:59:38.427Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T08:59:38.452Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T08:59:40.002Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T08:59:40.028Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:00:27.942Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:00:27.970Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:00:33.523Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:00:33.551Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:00:47.337Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:00:47.363Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:00:52.962Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:00:52.994Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:01:17.904Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:01:17.931Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:01:20.134Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:01:20.164Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:01:22.951Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:01:22.979Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:01:27.148Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:01:27.174Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:01:28.677Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:01:28.707Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:01:29.933Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:01:29.955Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:01:31.255Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:01:31.282Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:03:02.713Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:03:02.736Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:03:10.683Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:03:10.711Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:03:15.152Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:03:15.180Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:03:39.978Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:03:40.005Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:04:01.503Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:04:01.530Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:04:08.131Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:04:08.158Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:04:10.987Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:04:11.014Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:04:15.841Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:04:15.868Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:04:19.541Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:04:19.568Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:04:22.192Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:04:22.219Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:04:29.871Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:04:29.898Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:05:36.283Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:05:36.311Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:05:41.388Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:05:41.416Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:05:43.944Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:05:43.972Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:05:49.287Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:05:49.313Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:06:01.921Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:06:01.950Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:06:03.147Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:06:03.170Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:06:09.408Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:06:09.438Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:06:12.952Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:06:12.983Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:06:40.895Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:06:40.922Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:06:59.988Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:07:00.019Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:07:09.769Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:07:09.797Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:07:15.750Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:07:15.773Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:07:19.956Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:07:19.982Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:07:32.745Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:07:32.778Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:07:43.401Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:07:43.428Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:07:50.120Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:07:50.143Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:07:52.070Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:07:52.098Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:08:08.670Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:08:08.697Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:09:21.253Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:09:21.278Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:09:27.389Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:09:27.418Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:09:44.321Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:09:44.348Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:09:53.070Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:09:53.097Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:09:54.344Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:09:54.374Z"}
+{"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/getCardNumbers/4385331260665765","query":{},"responseTime":19,"status":"success","timestamp":"2024-09-19T09:11:40.990Z","userAgent":"PostmanRuntime/7.41.2"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:12:03.410Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:12:03.445Z"}
+{"level":"info","message":"Application Environment : development","timestamp":"2024-09-19T09:12:06.790Z"}
+{"level":"info","message":"Database connection successful.","timestamp":"2024-09-19T09:12:06.816Z"}
+{"body":{},"ip":"::1","level":"info","message":"HTTP Request","method":"GET","path":"/getCardNumbers/4385331260665765","query":{},"responseTime":16,"status":"success","timestamp":"2024-09-19T09:12:08.895Z","userAgent":"PostmanRuntime/7.41.2"}

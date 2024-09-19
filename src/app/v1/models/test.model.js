@@ -472,6 +472,16 @@ class Test {
         }
     }
     
+    static async getCardNumbers(account_number) {
+        try {
+            const pool = await poolPromise;
+            const sql = 'SELECT card_number, card_type FROM Cards WHERE account_number = ?';
+            const [res] = await pool.query(sql, [account_number]);
+            return res;
+        } catch (err) {
+            throw err;
+        }
+    }
 
     static async getCardDetails(account_number) {
         try {

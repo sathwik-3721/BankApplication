@@ -3,7 +3,7 @@ import express from 'express';
 import { applyForCard, createAccount, createCustomer, deleteCustomer, 
          depositMoney, generatePIN, getBalance, getCardDetails, 
          transactionHistory, transferMoney, updatePIN, withdrawMoney, 
-         login, getBalanceByCid, getTransactionByMail, getUserName, getAccnoByMail } from '../controllers/test.controller.js';
+         login, getBalanceByCid, getTransactionByMail, getUserName, getAccnoByMail, getCardNumbers } from '../controllers/test.controller.js';
 
 const router = express.Router();
 
@@ -60,5 +60,8 @@ router.get('/getUserName/:email', getUserName)
 
 // get account number using email
 router.get('/getAccnoByMail/:email', getAccnoByMail);
+
+// get card numbers by account number
+router.get('/getCardNumbers/:account_number', getCardNumbers);
 
 export default router;

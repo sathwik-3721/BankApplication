@@ -401,6 +401,21 @@ export async function getCardDetails(req, res) {
   }
 }
 
+export async function getCardNumbers(req, res) {
+  try {
+    const { account_number } = req.params;
+    console.log("account number", account_number);
+    const getCardNumbersResult = await Test.getCardNumbers(account_number);
+    if (getCardNumbersResult.length > 0) {
+      return res.status(200).json(getCardNumbersResult);
+    } else {
+      return res.status(404).json({ error: "Apply for a card to view your card details"});
+    }
+  } catch (err) {
+    throw err;
+  }
+}
+
 export async function generatePIN(req, res) {
   try {
     const { card_number, account_number } = req.body;
